@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  background-color: #223a5f;
+  background-color: #93b5e7;
+  /* background-color: #223a5f; */
 }
 .App {
   margin-top: 50px;
@@ -32,4 +33,11 @@
 .icons {
   padding: 10px;
   margin-left: 250px;
+}
+
+.output-values {
+  margin-left: 400px;
+  font-size: 40px;
+  display: flex;
+  padding: 10px;
 }
