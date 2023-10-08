@@ -1,7 +1,16 @@
 * {
   margin: 0;
-  background-color: #93b5e7;
+  background-image: url("./images/background-image.jpg");
+  /* background-color: #93b5e7; */
+
   /* background-color: #223a5f; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
 }
 .App {
   margin-top: 50px;
@@ -28,6 +37,13 @@
 }
 
 .main-section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .icons {
@@ -40,4 +56,16 @@
   font-size: 40px;
   display: flex;
   padding: 10px;
+}
+
+.button-color {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: rgb(240, 141, 191);
+  border-color: #fff;
+  color: yellow;
+}
+
+.device-color {
+  color: yellow;
 }

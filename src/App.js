@@ -7,7 +7,7 @@ import { useState } from "react";
 import Rock from "./component/Rock";
 import Paper from "./component/Paper";
 import Sisscors from "./component/Sisscors";
-
+import image from "./images/background.jpg";
 function App() {
   const [score, setScore] = useState(0);
   const [showRock, setShowRock] = useState(false);
@@ -88,6 +88,7 @@ function App() {
   return (
     <>
       <div className="main-section">
+        {/* <img src={image} alt="My Image" /> */}
         <div className="App">
           <div className="game-elements">
             <h1>Rock</h1>
@@ -105,19 +106,19 @@ function App() {
         </div>
         <div className="icons">
           <button
-            style={{ padding: " 10px 20px", fontSize: "20px" }}
+            className="button-color"
             onClick={() => setRandomIcon(handleStoneClicked())}
           >
             Rock
           </button>
           <button
-            style={{ padding: " 10px 20px", fontSize: "20px" }}
+            className="button-color"
             onClick={() => setRandomIcon(handlePaperClicked)}
           >
             Paper
           </button>
           <button
-            style={{ padding: " 10px 20px", fontSize: "20px" }}
+            className="button-color"
             onClick={() => setRandomIcon(handleSissorsClicked)}
           >
             Scissors
@@ -131,15 +132,15 @@ function App() {
               marginRight: "40px",
             }}
           >
-            <div>You</div>
-            <div>{sameButton}</div>
+            <div className="device-color">Player</div>
+            <div className="device-color">{sameButton}</div>
           </div>
           <div style={{ padding: "10px", border: "2px solid gray" }}>
-            <div>Computer</div>
-            <div>{randomIcon}</div>
+            <div className="device-color">Computer</div>
+            <div className="device-color ">{randomIcon}</div>
           </div>
         </div>
-        <div className="output-values"> {content}</div>
+        <div className="output-values device-color"> {content}</div>
       </div>
     </>
   );
