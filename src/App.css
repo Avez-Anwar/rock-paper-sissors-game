@@ -1,7 +1,7 @@
 * {
   margin: 0;
-  background-image: url("./images/background-image.jpg");
-  /* background-color: #93b5e7; */
+  /* background-image: url("./images/background-image.jpg"); */
+  background-color: #93b5e7;
 
   /* background-color: #223a5f; */
 }
@@ -25,7 +25,7 @@ body {
 }
 
 .score h1 {
-  background-color: #fff;
+  background-color: yellow;
   padding: 50px;
   color: #000;
   border-radius: 10px;
@@ -68,4 +68,10 @@ body {
 
 .device-color {
   color: yellow;
+}
+
+.flex-style {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
 }
