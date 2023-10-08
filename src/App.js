@@ -7,7 +7,9 @@ import { useState } from "react";
 import Rock from "./component/Rock";
 import Paper from "./component/Paper";
 import Sisscors from "./component/Sisscors";
-import image from "./images/background.jpg";
+import rockImage from "./images/rock2.png";
+import sissorImage from "./images/scissor2.png";
+import paperImage from "./images/paper2.png";
 function App() {
   const [score, setScore] = useState(0);
   const [showRock, setShowRock] = useState(false);
@@ -88,15 +90,54 @@ function App() {
   return (
     <>
       <div className="main-section">
-        <div className="flex-style">
-          <div style={{ padding: "10px", border: "2px solid gray" }}>
-            <div className="device-color">Player</div>
+        <div className="transperant-background">
+          <div className="output-values device-color"> {content}</div>
+          <div className="flex-style">
+            <div style={{ padding: "10px", border: "2px solid gray" }}>
+              <div className="device-color">Player</div>
+            </div>
+            <div className="flex-result">
+              <div className="device-color">{sameButton}</div>
+              <div className="device-color ">{randomIcon}</div>
+            </div>
+            <div style={{ padding: "10px", border: "2px solid gray" }}>
+              <div className="device-color">Computer</div>
+            </div>
           </div>
-          <div style={{ padding: "10px", border: "2px solid gray" }}>
-            <div className="device-color">Computer</div>
+          <div className="icons">
+            <button
+              className="button-color"
+              onClick={() => setRandomIcon(handleStoneClicked())}
+            >
+              <img
+                src={rockImage}
+                alt="Full Screen Image"
+                style={{ width: "70px", height: "70px" }}
+              />
+            </button>
+            <button
+              className="button-color"
+              onClick={() => setRandomIcon(handlePaperClicked)}
+            >
+              <img
+                src={paperImage}
+                alt="Full Screen Image"
+                style={{ width: "70px", height: "70px" }}
+              />
+            </button>
+            <button
+              className="button-color"
+              onClick={() => setRandomIcon(handleSissorsClicked)}
+            >
+              <img
+                src={sissorImage}
+                alt="Full Screen Image"
+                style={{ width: "70px", height: "70px" }}
+              />
+            </button>
           </div>
         </div>
-        <div className="App">
+        {/* <div className="App">
           <div className="game-elements">
             <h1>Rock</h1>
             <h1>Paper</h1>
@@ -110,31 +151,12 @@ function App() {
             </h1>
           </div>
         </div>
-        <div className="icons">
-          <button
-            className="button-color"
-            onClick={() => setRandomIcon(handleStoneClicked())}
-          >
-            Rock
-          </button>
-          <button
-            className="button-color"
-            onClick={() => setRandomIcon(handlePaperClicked)}
-          >
-            Paper
-          </button>
-          <button
-            className="button-color"
-            onClick={() => setRandomIcon(handleSissorsClicked)}
-          >
-            Scissors
-          </button>
-        </div>
+
         <div className="output-values">
           <div className="device-color">{sameButton}</div>
           <div className="device-color ">{randomIcon}</div>
-        </div>
-        <div className="output-values device-color"> {content}</div>
+        </div> */}
+        {/* <div className="output-values device-color"> {content}</div> */}
       </div>
     </>
   );
