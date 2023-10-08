@@ -88,7 +88,14 @@ function App() {
   return (
     <>
       <div className="main-section">
-        {/* <img src={image} alt="My Image" /> */}
+        <div className="flex-style">
+          <div style={{ padding: "10px", border: "2px solid gray" }}>
+            <div className="device-color">Player</div>
+          </div>
+          <div style={{ padding: "10px", border: "2px solid gray" }}>
+            <div className="device-color">Computer</div>
+          </div>
+        </div>
         <div className="App">
           <div className="game-elements">
             <h1>Rock</h1>
@@ -96,8 +103,7 @@ function App() {
             <h1>Scissors</h1>
           </div>
           <div className="score">
-            <h1>
-              {}
+            <h1 style={{ color: "pink" }}>
               Score
               <br />
               {score}
@@ -125,20 +131,8 @@ function App() {
           </button>
         </div>
         <div className="output-values">
-          <div
-            style={{
-              padding: "10px",
-              border: "2px solid gray",
-              marginRight: "40px",
-            }}
-          >
-            <div className="device-color">Player</div>
-            <div className="device-color">{sameButton}</div>
-          </div>
-          <div style={{ padding: "10px", border: "2px solid gray" }}>
-            <div className="device-color">Computer</div>
-            <div className="device-color ">{randomIcon}</div>
-          </div>
+          <div className="device-color">{sameButton}</div>
+          <div className="device-color ">{randomIcon}</div>
         </div>
         <div className="output-values device-color"> {content}</div>
       </div>
