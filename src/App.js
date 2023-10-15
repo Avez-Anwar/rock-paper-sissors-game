@@ -3,7 +3,7 @@ import "./App.css";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 import NoteIcon from "@mui/icons-material/Note";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Rock from "./component/Rock";
 import Paper from "./component/Paper";
 import Sisscors from "./component/Sisscors";
@@ -16,6 +16,12 @@ function App() {
   const [randomIcon, setRandomIcon] = useState(null);
   const [sameButton, setSameButton] = useState(null);
 
+  const [userChoice, setUserChoice] = useState(null);
+
+  const [imagePath1, setImagePath1] = useState("./images/rock2.png");
+  const [imagePath2, setImagePath2] = useState("./images/rock2.png");
+  const [areImagesEqual, setAreImagesEqual] = useState(false);
+
   const handlePaperClicked = () => {
     setSameButton("Paper");
     const randomNumber = Math.floor(Math.random() * 3);
@@ -27,6 +33,11 @@ function App() {
       return "Scissors";
     }
   };
+
+  useEffect(() => {
+    // Compare images when component mounts or image paths change
+    setAreImagesEqual(imagePath1 === imagePath2);
+  }, [imagePath1, imagePath2]);
 
   const handleSissorsClicked = () => {
     setSameButton("Scissors");
@@ -51,13 +62,25 @@ function App() {
       return "Scissors";
     }
   };
-  let imagePath = (
+  let imagePath33 = (
     <img
       src={rockImage}
       alt="Full Screen Image"
       style={{ width: "70px", height: "70px" }}
     />
   );
+  let imagePath23 = (
+    <img
+      src={rockImage}
+      alt="Full Screen Image"
+      style={{ width: "70px", height: "70px" }}
+    />
+  );
+
+  console.log(imagePath1);
+  console.log(imagePath2);
+  console.log(`image comparision ${imagePath1 == imagePath2}`);
+
   let content;
   if (sameButton === "Rock" && randomIcon === "Rock") {
     content = "Draw";
@@ -82,6 +105,7 @@ function App() {
 
   return (
     <>
+      <img src={imagePath1} alt="Image 1" />
       <div className="main-section">
         <div className="transperant-background">
           <div className="output-values device-color"> {content}</div>
