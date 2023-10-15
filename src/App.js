@@ -19,32 +19,45 @@ function App() {
   const handlePaperClicked = () => {
     setSameButton("Paper");
     const randomNumber = Math.floor(Math.random() * 3);
-    switch (randomNumber) {
-      case 0:
-        return "Rock";
-      case 1:
-        return "Paper";
-      case 2:
-        return "Scissors";
-      default:
-        return null;
+    if (randomNumber === 1) {
+      return "Rock";
+    } else if (randomNumber === 2) {
+      return "Paper";
+    } else {
+      return "Scissors";
     }
   };
 
   const handleSissorsClicked = () => {
     setSameButton("Scissors");
     const randomNumber = Math.floor(Math.random() * 3);
-    switch (randomNumber) {
-      case 0:
-        return "Rock";
-      case 1:
-        return "Paper";
-      case 2:
-        return "Scissors";
-      default:
-        return null;
+    if (randomNumber === 1) {
+      return "Rock";
+    } else if (randomNumber === 2) {
+      return "Paper";
+    } else {
+      return "Scissors";
     }
   };
+
+  const handleStoneClicked = () => {
+    setSameButton("Rock");
+    const randomNumber = Math.floor(Math.random() * 3);
+    if (randomNumber === 1) {
+      return "Rock";
+    } else if (randomNumber === 2) {
+      return "Paper";
+    } else {
+      return "Scissors";
+    }
+  };
+  let imagePath = (
+    <img
+      src={rockImage}
+      alt="Full Screen Image"
+      style={{ width: "70px", height: "70px" }}
+    />
+  );
   let content;
   if (sameButton === "Rock" && randomIcon === "Rock") {
     content = "Draw";
@@ -66,27 +79,7 @@ function App() {
     content = "YOU LOSE";
   }
   console.log(content);
-  const handleStoneClicked = () => {
-    setSameButton("Rock");
-    if (content === "Draw") {
-      setScore(score + 0);
-    } else if (content === "YOU WIN") {
-      setScore(score + 1);
-    } else if (content === "YOU LOSE") {
-      setScore(score - 1);
-    }
-    const randomNumber = Math.floor(Math.random() * 3);
-    switch (randomNumber) {
-      case 0:
-        return "Rock";
-      case 1:
-        return "Paper";
-      case 2:
-        return "Scissors";
-      default:
-        return null;
-    }
-  };
+
   return (
     <>
       <div className="main-section">
