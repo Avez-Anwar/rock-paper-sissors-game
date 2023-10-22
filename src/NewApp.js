@@ -48,6 +48,7 @@ const RPSGame = () => {
           )}
         </div>
       </div>
+      -----------------------------------------------------------------------------------
       <div className="choices-container">
         {choices.map((choice) => (
           <div key={choice} className="choice">
