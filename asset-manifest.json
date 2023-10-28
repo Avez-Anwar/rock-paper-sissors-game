@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/stone-paper-sissors-game/static/css/main.d117c51c.css",
+    "main.js": "/stone-paper-sissors-game/static/js/main.df538910.js",
+    "static/js/787.28cb0dcd.chunk.js": "/stone-paper-sissors-game/static/js/787.28cb0dcd.chunk.js",
+    "static/media/scissor2.png": "/stone-paper-sissors-game/static/media/scissor2.e2c45940de6aa9e36965.png",
+    "static/media/logo.svg": "/stone-paper-sissors-game/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/stone-paper-sissors-game/index.html",
+    "main.d117c51c.css.map": "/stone-paper-sissors-game/static/css/main.d117c51c.css.map",
+    "main.df538910.js.map": "/stone-paper-sissors-game/static/js/main.df538910.js.map",
+    "787.28cb0dcd.chunk.js.map": "/stone-paper-sissors-game/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d117c51c.css",
+    "static/js/main.df538910.js"
+  ]
+}
