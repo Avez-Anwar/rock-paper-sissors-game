@@ -105,7 +105,6 @@ function App() {
 
   return (
     <>
-      <img src={imagePath1} alt="Image 1" />
       <div className="main-section">
         <div className="transperant-background">
           <div className="output-values device-color"> {content}</div>
