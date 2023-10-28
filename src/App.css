@@ -55,13 +55,21 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin-top: 30px;
+  }
 }
 
 .output-values {
-  margin-left: 400px;
+  margin-left: 450px;
   font-size: 40px;
   display: flex;
   padding: 10px;
+  position: absolute;
+  @media (max-width: 900px) {
+    margin-left: 50px;
+  }
 }
 
 .button-color {
@@ -73,8 +81,15 @@ body {
   border: none;
 }
 
+.sameButton {
+  color: black;
+}
+
 .device-color {
   color: yellow;
+}
+.player {
+  color: rgb(0, 0, 0);
 }
 
 .transperant-background {
@@ -93,10 +108,20 @@ body {
   transform: translate(-50%, -50%);
   align-items: center;
   width: 90%;
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
 
 .flex-result {
   display: flex;
   justify-content: space-around;
   width: 20%;
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }

@@ -111,10 +111,10 @@ function App() {
           <div className="output-values device-color"> {content}</div>
           <div className="flex-style">
             <div style={{ padding: "10px", border: "2px solid gray" }}>
-              <div className="device-color">Player</div>
+              <div className="player">Player</div>
             </div>
             <div className="flex-result">
-              <div className="device-color">{sameButton}</div>
+              <div className="sameButton">{sameButton}</div>
               <div className="device-color ">{randomIcon}</div>
             </div>
             <div style={{ padding: "10px", border: "2px solid gray" }}>
